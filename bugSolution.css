@@ -1,0 +1,22 @@
+The following CSS code addresses the issue using the `box-sizing: border-box;` property:
+
+```css
+div {
+  width: 50%;
+  height: 50%;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; /* Added for fix */
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  background-color: lightcoral;
+  box-sizing: border-box; /* Added for fix */
+}
+```
+
+By using `box-sizing: border-box;`, we ensure that the padding and border are included within the element's total width and height, resolving the rounding discrepancies and eliminating the gap.
