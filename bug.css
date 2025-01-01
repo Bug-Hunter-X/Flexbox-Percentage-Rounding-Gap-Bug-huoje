@@ -1,0 +1,20 @@
+The following CSS code snippet exhibits unexpected behavior in some browsers:
+
+```css
+div {
+  width: 50%;
+  height: 50%;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  background-color: lightcoral;
+}
+```
+
+The expected outcome is that the inner `div` completely fills its parent container.  However, due to rounding issues with percentages and the flexbox layout, a small gap might appear at the bottom or right edge of the inner `div`. This happens because the sum of width or height (50% + 50%) might be slightly smaller than the available space. 
